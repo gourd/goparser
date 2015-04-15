@@ -8,7 +8,7 @@ find the bare [go/ast](http://golang.org/pkg/go/ast/) and
 [go/parser](http://golang.org/pkg/go/parser/) hard to use,
 this library would be useful to you.
 
-![Travis last test result on master](https://api.travis-ci.org/gourd/goparser.svg "Travis last test result on master")
+![Travis last test result on master](https://api.travis-ci.org/gourd/goparser.svg?branch=master "Travis last test result on master")
 
 Gourd
 -----
