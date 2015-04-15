@@ -31,12 +31,12 @@ func TestExample(t *testing.T) {
 	expected := []string{"Post", "Comment", "User"}
 	var found []TypeSpec
 	for ts := range FilterTypeSpec(FilterGenDecl(ChanDecls(f.Decls))) {
-		numt++
 		pts := ParseTypeSpec(ts)
-		if !strInSlice(pts.Name, expected) {
+		if pts.Name != expected[numt] {
 			t.Errorf("Unexptected definition \"%s\"", pts.Name)
 		}
 		found = append(found, pts)
+		numt++
 	}
 
 	// see if all types needed are found
