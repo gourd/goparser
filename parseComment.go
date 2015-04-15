@@ -16,7 +16,7 @@ func init() {
 				// break down into lines
 				// remove " // " from each line and combine string
 				r := regexp.MustCompile("(?m)^[ \t]*\\/\\/[ \t]*")
-				return strings.Trim(r.ReplaceAllString(in, ""), " \t\n\r")
+				return strings.Trim(r.ReplaceAllString(in, ""), " \t\n\r") + "\n"
 			},
 		},
 		cmtDef{
@@ -31,7 +31,7 @@ func init() {
 				for _, l := range lines {
 					out += r3.ReplaceAllString(l, "") + "\n"
 				}
-				return strings.TrimRight(out, " \t\n\r")
+				return strings.TrimRight(out, " \t\n\r") + "\n"
 			},
 		},
 		cmtDef{
@@ -45,7 +45,7 @@ func init() {
 				for _, l := range lines {
 					out += l + "\n"
 				}
-				return strings.TrimRight(out, " \t\n\r")
+				return strings.TrimRight(out, " \t\n\r") + "\n"
 			},
 		},
 	}
