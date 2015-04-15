@@ -86,13 +86,3 @@ func TestDeclsToTypes(t *testing.T) {
 		t.Errorf("Found:    %#v", found)
 	}
 }
-
-// test if a string exists in a string slice
-func strInSlice(a string, list []string) bool {
-	for _, b := range list {
-		if b == a {
-			return true
-		}
-	}
-	return false
-}
