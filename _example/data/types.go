@@ -10,16 +10,16 @@ package example
 type Post struct {
 
 	// Id documentation line
-	Id int64 `db:"id" json:"id"` // Id comment
+	Id int64 `db:"id" json:"id" foo:"bar"` // Id comment
 
 	// UserId documentation line
-	UserId int `db:"user_id" json:"user_id"` // UserId comment
+	UserId int `db:"user_id" json:"user_id" foo:"-,omitempty"` // UserId comment
 
 	// Title documentation line
-	Title string `db:"title" json:"title"` // Title comment
+	Title string `db:"title" json:"title" foo:"bar"` // Title comment
 
 	// Body documentation line
-	Body string `db:"body" json:"body"` // Body comment
+	Body string `db:"body" json:"body" foo:"-,omitempty"` // Body comment
 
 }
 

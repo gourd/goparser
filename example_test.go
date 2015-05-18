@@ -12,7 +12,7 @@ func TestExample(t *testing.T) {
 	fset := token.NewFileSet()
 
 	// filepath can only be filename
-	filePath := "./_example/types.go"
+	filePath := "./_example/data/types.go"
 	f, err := parser.ParseFile(fset, filePath, nil, parser.ParseComments)
 	if err != nil {
 		t.Errorf(err.Error())
@@ -53,7 +53,7 @@ func TestDeclsToTypes(t *testing.T) {
 	fset := token.NewFileSet()
 
 	// filepath can only be filename
-	filePath := "./_example/types.go"
+	filePath := "./_example/data/types.go"
 	f, err := parser.ParseFile(fset, filePath, nil, parser.ParseComments)
 	if err != nil {
 		t.Errorf(err.Error())
